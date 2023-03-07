@@ -1,0 +1,23 @@
+.btn{
+    cursor: pointer;
+}
+
+.restaurants{
+    color: green;
+}
+
+.musees{
+    color: red;
+}
+
+.magasins{
+    color: blue;
+}
+
+.lieux{
+    color: purple;
+}
+
+.hotel{
+    color: black;
+}
