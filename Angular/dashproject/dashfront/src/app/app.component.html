@@ -1,24 +1,28 @@
  <section id="container">
-    <!-- **********************************************************************************************************************************************************
-        TOP BAR CONTENT & NOTIFICATIONS
-        *********************************************************************************************************************************************************** -->
-    <!--header start-->
-    <header class="header black-bg">
-
-      <table>
-        <thead>
-            <tr>
-                <th colspan="2">Direct-Mans</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td><app-gtfs></app-gtfs></td>
-              <td><app-userbox></app-userbox></td>
-            </tr>
-        </tbody>
-    </table>
-      
+    <header class="header">
+      <p style="text-align:center;"><img src="../assets/img/logo.png" alt="Logo" width="70"></p>
+      <body class="body">
+        <table>
+          <tbody>
+              <tr>
+                <td><p>Points d'intérêts !</p></td>
+                <td><p>Vous êtes ici !</p></td>
+              </tr>
+              <tr>
+                <td><app-interets></app-interets></td>
+                <td><app-maps></app-maps></td>
+              </tr>
+              <tr>
+                <td><p>Météo locale !</p></td>
+                <td><p>Déplacez-vous !</p></td>
+              </tr>
+              <tr>
+                <td><app-meteo></app-meteo></td>
+                <td><app-setram></app-setram></td>
+              </tr>
+          </tbody>
+        </table>
+      </body>      
     </header>
   </section>
   <!-- js placed at the end of the document so the pages load faster -->

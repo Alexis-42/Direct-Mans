@@ -25,13 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/style.css",
-              "src/style-responsive.css",
-              "src/table-responsive.css",
-              "src/to-do.css",
-              "src/zabuto_calendar.css"
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
