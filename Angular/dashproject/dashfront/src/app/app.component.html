@@ -1,6 +1,11 @@
  <section id="container">
     <header class="header">
-      <p><img src="../assets/img/logo.png" alt="Logo" width="70"></p>
+      <div class="logo">
+        <svg>
+          <ellipse cx="50%" cy="50%" rx="30%" ry="50%" style="fill:#E5E4E4;" />
+          <image href="../assets/img/logo.png" x="18vh" y="0vh"/>
+        </svg>
+      </div>
       <body class="body">
         <table>
           <tbody>
@@ -10,7 +15,7 @@
               </tr>
               <tr>
                 <td><app-interets></app-interets></td>
-                <td><app-maps></app-maps></td>
+                <td><google-map></google-map></td>
               </tr>
               <tr>
                 <td><p>Météo locale !</p></td>
@@ -36,3 +41,4 @@
   <script src="lib/common-scripts.js"></script>
   <script type="text/javascript" src="lib/gritter/js/jquery.gritter.js"></script>
   <script type="text/javascript" src="lib/gritter-conf.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBVSGsDRgqKqzi2jcijfRMnrY2MGYAsk4"></script>

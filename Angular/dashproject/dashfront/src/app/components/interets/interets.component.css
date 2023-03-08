@@ -1,23 +1,4 @@
 .btn{
-    cursor: pointer;
-}
-
-.restaurants{
-    color: green;
-}
-
-.musees{
-    color: red;
-}
-
-.magasins{
-    color: blue;
-}
-
-.lieux{
-    color: purple;
-}
-
-.hotel{
-    color: black;
+    border-radius: 45%;
+    background-color: #f5f5f5;
 }

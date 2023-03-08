@@ -1,3 +1,19 @@
-table{
-    width: 100%;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #E8D8B0;
+}
+
+.logo{
+    text-align: center;
+}
+
+svg{
+    width: 50vh;
+    height: 15vh;
+}
+
+image{
+    width: 15vh;
+    height: 15vh;
 }
