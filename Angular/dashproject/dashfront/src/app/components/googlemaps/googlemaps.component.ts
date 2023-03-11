@@ -1,26 +1,46 @@
 import { Component, OnInit } from '@angular/core';
+import { Loader } from '@googlemaps/js-api-loader';
+
+let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
+
+const loader = new Loader({
+  apiKey: "AIzaSyBUnyVyvNnyU_7GoqJvZfMhw4rsBjZ0Fhc",
+  version: "weekly",
+  libraries: ["places"]
+});
+
+let mapOptions = {
+  center: {
+    lat: 48.00746072080193,
+    lng: 0.19740114421013952
+  },
+  zoom: 14
+};
+
+function initMap(){
+  // Promise
+loader.load().then((google) => {
+  map = new google.maps.Map(document.getElementById("map") as HTMLElement, mapOptions); // Creer la map
+  });
+  }
+
+
+declare global {
+  interface Window {
+    initMap: () => void;
+  }
+}
+window.initMap = initMap;
 
 @Component({
-  selector: 'app-googlemaps',
+  selector: 'app-maps',
   templateUrl: './googlemaps.component.html',
   styleUrls: ['./googlemaps.component.css']
 })
+
 export class GooglemapsComponent implements OnInit {
-  constructor() { }
-
   ngOnInit(): void {
-  }
-  display : any;
-  center: google.maps.LatLngLiteral = {lat: 48.016006, lng: 0.161878};
-  zoom = 4;
-
-  moveMap(event: google.maps.MapMouseEvent) {
-    if(event.latLng!= null)
-    this.center = (event.latLng.toJSON());
-  }
-
-  move(event: google.maps.MapMouseEvent) {
-    if(event.latLng != null)
-    this.display = event.latLng.toJSON();
+    initMap();
   }
 }
+
