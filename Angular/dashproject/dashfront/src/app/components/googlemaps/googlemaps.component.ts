@@ -15,7 +15,7 @@ let mapOptions = {
     lat: 48.00746072080193,
     lng: 0.19740114421013952
   },
-  zoom: 14
+  zoom: 16
 };
 
 function initMap(){
