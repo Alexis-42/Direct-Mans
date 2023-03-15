@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { GtfsComponent } from './gtfs/gtfs.component';
@@ -21,7 +22,8 @@ import { GooglemapsComponent } from './components/googlemaps/googlemaps.componen
   ],
   imports: [
     BrowserModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,10 @@
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import cle from '../../../../cle.json';
 
+@Injectable({
+  providedIn:'root'
+})
 export class MeteoService {
   private urlMeteo = 'https://api.meteo-concept.com/api/forecast/nextHours?insee=';
   private token;

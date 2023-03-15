@@ -7,14 +7,14 @@ import { MeteoService } from './meteo.service';
   styleUrls: ['./meteo.component.css']
 })
 export class MeteoComponent implements OnInit{
-  //constructor(private service: MeteoService){}
+  constructor(private service: MeteoService){}
 
   ngOnInit(): void {
       var data;
       console.log("test");
-      /*this.service.getMeteo().subscribe(reponse=>{
+      this.service.getMeteo().subscribe(reponse=>{
         console.log("rep",reponse);
         data = JSON.parse(JSON.stringify(reponse));
-      })*/
+      })
   }
 }
