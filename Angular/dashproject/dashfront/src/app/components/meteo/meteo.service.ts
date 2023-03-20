@@ -6,7 +6,7 @@ import cle from '../../../../cle.json';
   providedIn:'root'
 })
 export class MeteoService {
-  private urlMeteo = 'https://api.meteo-concept.com/api/forecast/nextHours?insee=';
+  private urlMeteo = 'https://api.meteo-concept.com/api/forecast/daily?insee=';
   private token;
   private insee;
   private parametres;
@@ -14,7 +14,7 @@ export class MeteoService {
   constructor(private http: HttpClient) {
     this.token = "&token="+cle.CleMeteoConcept;
     this.insee = "72181";
-    this.parametres = "&hourly=true&world=false";
+    this.parametres = "&start=0&end=1";
   }
   getMeteo(){
     return this.http.get(this.urlMeteo+this.insee+this.parametres+this.token);

@@ -1,1 +1,24 @@
-<p>meteo works!</p>
+<div *ngIf="affiche; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <table>
+        <tbody>
+            <tr>
+                <td>Aujourd'hui</td>
+                <td>Demain</td>
+            </tr>
+            <tr>
+                <td><img src={{imagePathToday}} /></td>
+                <td><img src={{imagePathTomorrow}} /></td>
+            </tr>
+            <tr>
+                <td><p>Min : {{tempsMinToday}}°C</p></td>
+                <td><p>Min : {{tempsMinTomorrow}}°C</p></td>
+            </tr>
+            <tr>
+                <td><p>Max : {{tempsMaxToday}}°C</p></td>
+                <td><p>Max : {{tempsMaxTomorrow}}°C</p></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
+<ng-template #elseBlock><p>chargement...</p></ng-template>
