@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setram.component.css']
 })
 export class SetramComponent implements OnInit{;
-  infos: { numero_ligne: string; nom_arret: string; lien: string}[];
+  infos: { numero_ligne: string; nom_arret: string; lien: string;}[];
 
   constructor(){
     this.infos = [];

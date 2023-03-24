@@ -3,11 +3,14 @@
         <tbody>
             <tr id="charly" *ngFor="let info of this.infos">
                 <table id="tableau">
-                    <tr>
-                        <td><img src="../../../assets/img/num_bus/{{info.numero_ligne}}.png"></td>
-                        <td>ligne {{info.numero_ligne}}</td>
-                        <td><a href={{info.lien}}>[voir les horraires]</a></td>
-                    </tr>
+                  <tr>
+                    <td rowspan="2"><img src="../../../assets/img/num_bus/{{info.numero_ligne}}.png"><br></td>
+                    <td  rowspan="2">ligne {{info.numero_ligne}}</td>
+                    <td><a href={{info.lien}}>[voir les horraires]</a></td>
+                  </tr>
+                  <tr>
+                    <td>arrêt :{{info.nom_arret}}</td>
+                  </tr>
                 </table>
             </tr>
         </tbody>
