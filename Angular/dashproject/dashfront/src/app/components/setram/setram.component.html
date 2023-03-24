@@ -1,12 +1,12 @@
 <div id="setram_cap">
     <table>
         <tbody>
-            <tr id="charly" *ngFor="let transp of this.nom">
+            <tr id="charly" *ngFor="let info of this.infos">
                 <table id="tableau">
                     <tr>
-                        <td><img src="../../../assets/img/num_bus/{{transp}}.png"></td>
-                        <td>ligne {{transp}}</td>
-                        <td><a href="google.com">[voir les horraires]</a>   </td>
+                        <td><img src="../../../assets/img/num_bus/{{info.numero_ligne}}.png"></td>
+                        <td>ligne {{info.numero_ligne}}</td>
+                        <td><a href={{info.lien}}>[voir les horraires]</a></td>
                     </tr>
                 </table>
             </tr>

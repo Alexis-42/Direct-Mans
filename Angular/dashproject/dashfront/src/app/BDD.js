@@ -2,22 +2,11 @@
 const initSqlJs = require('sql.js');
 const fs = require('fs');
 const readline = require('readline');
-/*
 const express = require('express')
 const app = express()
 const port = 4000
 const cors = require('cors');
 app.use(cors());
-app.get('/',(req,res) => {
-  data = [{name: 'T1'},{name: 'T2'},{name: 'T3'},{name: '4'},{name: '5'}];
-  //tram = ['T1','T2','T3'].forEach(nom => res.json({name: nom}));
-  res.json(data);
-})
-*/
-// rayon en Metre
-function trouveArretsProches(lat, lon, rayon) {
-  const b = db.exec("SELECT stop_id FROM stops WHERE (stop_lat BETWEEN (48.005382-0.0001 ) AND 48.005382 ) AND (stop_lon BETWEEN  0.1949579 AND  0.1949579);");
-}
 
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   var R = 6371; // Radius of the earth in km
@@ -54,19 +43,27 @@ config = {
       console.log('Error:', e.stack);
     }
 
-    const b = db.exec("SELECT stop_id,stop_name,stop_lat,stop_lon FROM stops WHERE (stop_lat BETWEEN 48.004382 AND 48.006382 ) OR (stop_lon BETWEEN  0.1959579 AND  0.1939579);");
+    const b = db.exec("SELECT route_short_name,stop_name,route_link FROM stops JOIN stop_times USING(stop_id) JOIN trips USING(trip_id) JOIN routes USING(route_id) WHERE (stop_lat BETWEEN 48.004382 AND 48.006382 ) OR (stop_lon BETWEEN  0.1959579 AND  0.1939579);");
 
-    for(var i=0; i<100; i++){
+    app.get('/',(req,res) => {
+      //tram = ['T1','T2','T3'].forEach(nom => res.json({name: nom}));
+      res.json(JSON.parse(JSON.stringify(b[0].values)));
+    })
+
+    app.listen(port, function (err) {
+      if (err) console.log(err);
+      console.log("Server listening on PORT", port);
+    });
+
+    console.log(JSON.parse(JSON.stringify(b[0].values)));
+
+    for(var i=0; i<b[0].values.length; i++){
       // stop_id,stop_name,stop_lat,stop_lon
-      console.log("\n"+(b[0].values[i][0])+" : "+(b[0].values[i][1])+" ( lat : "+(b[0].values[i][2])+" long : "+(b[0].values[i][3])+")");
+      //console.log("\nligne "+(b[0].values[i][0])+" ( arret : "+(b[0].values[i][1])+" lien : "+(b[0].values[i][2])+")");
     }
 });
-/*
-app.listen(port, function (err) {
-  if (err) console.log(err);
-  console.log("Server listening on PORT", port);
-});
-*/
+
+
 // =========== LINE BY LINE ===========
 /*
 async function processLineByLine() {
