@@ -24,7 +24,6 @@ export class MeteoComponent implements OnInit{
   ngOnInit(): void {
       var data;
       this.service.getMeteo().subscribe(reponse=>{
-        console.log("rep",reponse);
         data = JSON.parse(JSON.stringify(reponse));
         this.weatherToday = data.forecast[0].weather;
         this.tempsMinToday = data.forecast[0].tmin;

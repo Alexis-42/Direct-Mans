@@ -1,5 +1,9 @@
-table, th, td {
-    border: 1px solid black;
+table {
     border-collapse: collapse;
     background-color: #E8D8B0;
+    width: 100%;
+}
+
+td{
+    text-align: center;
 }
