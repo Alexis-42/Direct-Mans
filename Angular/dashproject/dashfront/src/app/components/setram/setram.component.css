@@ -1,0 +1,27 @@
+#charly {
+    width: 24vh;
+    height: 6vh;
+    line-height: 2vh;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+}
+
+#setram_cap{
+    max-height: 24vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#tableau{
+    width: 24vh;
+    height: 1vh;
+}
+
+li {
+    border-top: 1px solid #ccc;
+}
+
+td{
+    text-align: center;
+}

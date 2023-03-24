@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { GtfsComponent } from './gtfs/gtfs.component';
 import { MeteoComponent } from './components/meteo/meteo.component';
 import { InteretsComponent } from './components/interets/interets.component';
 import { SetramComponent } from './components/setram/setram.component';
@@ -14,7 +13,6 @@ import { GooglemapsComponent } from './components/googlemaps/googlemaps.componen
 @NgModule({
   declarations: [
     AppComponent,
-    GtfsComponent,
     MeteoComponent,
     InteretsComponent,
     SetramComponent,

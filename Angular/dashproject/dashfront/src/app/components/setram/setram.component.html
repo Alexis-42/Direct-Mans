@@ -1,1 +1,15 @@
-<p>setram works!</p>
+<div id="setram_cap">
+    <table>
+        <tbody>
+            <tr id="charly" *ngFor="let transp of tram">
+                <table id="tableau">
+                    <tr>
+                        <td><img src="../../../assets/img/num_bus/{{transp.name}}.png"></td>
+                        <td>ligne {{transp.name}}</td>
+                        <td><a href="google.com">[voir les horraires]</a>   </td>
+                    </tr>
+                </table>
+            </tr>
+        </tbody>
+    </table>
+</div>
