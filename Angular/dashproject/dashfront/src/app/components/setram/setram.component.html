@@ -1,11 +1,11 @@
 <div id="setram_cap">
     <table>
         <tbody>
-            <tr id="charly" *ngFor="let transp of tram">
+            <tr id="charly" *ngFor="let transp of this.nom">
                 <table id="tableau">
                     <tr>
-                        <td><img src="../../../assets/img/num_bus/{{transp.name}}.png"></td>
-                        <td>ligne {{transp.name}}</td>
+                        <td><img src="../../../assets/img/num_bus/{{transp}}.png"></td>
+                        <td>ligne {{transp}}</td>
                         <td><a href="google.com">[voir les horraires]</a>   </td>
                     </tr>
                 </table>

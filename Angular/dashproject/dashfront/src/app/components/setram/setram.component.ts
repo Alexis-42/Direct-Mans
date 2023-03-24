@@ -1,40 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-setram',
   templateUrl: './setram.component.html',
   styleUrls: ['./setram.component.css']
 })
-export class SetramComponent {
-  tram = [
-    {
-      name: 'T1'
-    },
-    {
-      name: 'T2'
-    },
-    {
-      name: 'T3'
-    }
-    ,
-    {
-      name: '4'
-    }
-    ,
-    {
-      name: '5'
-    }
-    ,
-    {
-      name: '6'
-    }
-    ,
-    {
-      name: '7'
-    }
-    ,
-    {
-      name: '10'
-    }
-    ];
+export class SetramComponent implements OnInit{;
+  nom: String[];
+
+  constructor(){
+    this.nom = [];
+  }
+ 
+  ngOnInit(): void {
+      fetch("http://localhost:4000/")
+        .then(res => res.json())
+        .then(data => {
+        var bdd = JSON.parse(JSON.stringify(data));
+        bdd.forEach((element:any) => {
+          this.nom.push(element.name);
+        });
+        console.log(bdd);
+      });
+  }
+
 }
