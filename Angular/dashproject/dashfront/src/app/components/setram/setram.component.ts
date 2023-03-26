@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { loader } from '../googlemaps/googlemaps.component';
 
 // distance à laquelle on affiche les lignes (en mètres)
-const distanceAffichageLigne = 300;
+const distanceAffichageLigne = 600;
 export const utiliserPositionFictive = true;
 @Component({
   selector: 'app-setram',
@@ -39,7 +39,7 @@ export class SetramComponent implements OnInit{;
             }
           });
           this.infos.sort((a,b) => a.distance - b.distance);
-          console.log(this.infos);
+          //console.log(this.infos);
         });
       });
 
