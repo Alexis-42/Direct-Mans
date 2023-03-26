@@ -23,7 +23,6 @@ function initMap(){
 
 loader.load().then((google) => {
   map = new google.maps.Map(document.getElementById("map") as HTMLElement, mapOptions);
-
   const centerButton = document.createElement("button");
 
   centerButton.textContent = "Recentrer";

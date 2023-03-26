@@ -7,9 +7,52 @@ import { loader } from '../googlemaps/googlemaps.component';
   styleUrls: ['./interets.component.css']
 })
 
+
+
 export class InteretsComponent implements OnInit{
     lieuxSelect: { nom: string; image: string; distance: number}[];
     lieux: { nom: string; image: string; distance: number}[];
+
+    hotel(){
+        this.lieuxSelect = [];
+        this.lieux.forEach(element => {
+          if(element.image == '../../../assets/img/hotel.png')
+            this.lieuxSelect.push(element);
+        });
+    }
+
+    parc(){
+      this.lieuxSelect = [];
+      this.lieux.forEach(element => {
+        if(element.image == '../../../assets/img/parc.png')
+          this.lieuxSelect.push(element);
+      });
+    }
+
+    restaurant(){
+      this.lieuxSelect = [];
+      this.lieux.forEach(element => {
+        if(element.image == '../../../assets/img/cutlery.png')
+          this.lieuxSelect.push(element);
+      });
+    }
+
+    musée(){
+      this.lieuxSelect = [];
+      this.lieux.forEach(element => {
+        if(element.image == '../../../assets/img/pantheon.png')
+          this.lieuxSelect.push(element);
+      });
+    }
+
+
+    magasin(){
+      this.lieuxSelect = [];
+      this.lieux.forEach(element => {
+        if(element.image == '../../../assets/img/shopping-cart.png')
+          this.lieuxSelect.push(element);
+      });
+    }
 
     constructor(){
       this.lieuxSelect = [];
