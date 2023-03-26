@@ -35,6 +35,12 @@ export class InteretsComponent implements OnInit{
             this.lieux.push({nom: noms[i], image: images[i], distance: Math.floor(distances[i])});
           }
 
+          this.lieux.sort((a,b) => a.distance - b.distance);
+
+          this.lieux.forEach(element => {
+            this.lieuxSelect.push(element);
+          });
+
         }, function errorCallback(error) {
           console.log(error)
        });
