@@ -1,5 +1,7 @@
 #poi{
-
+  max-height: 24vh;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .btn{

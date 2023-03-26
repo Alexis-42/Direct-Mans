@@ -1,39 +1,41 @@
-<table id="poi">
-  <thead>
-    <tr>
-      <th>
-        <p>Catégories</p>
-        <button class="btn">
-            <p>Restaurants<img src="../../../assets/img/cutlery.png" width="10"></p>
-        </button>
-        <button class="btn">
-            <p>Magasins<img src="../../../assets/img/shopping-cart.png" width="10"></p>
-        </button>
-        <button class="btn">
-            <p>Musées<img src="../../../assets/img/pantheon.png" width="10"></p>
-        </button>
-        <button class="btn">
-            <p>Lieux<img src="../../../assets/img/parc.png" width="10"></p>
-        </button>
-        <button class="btn">
-            <p>Hotels<img src="../../../assets/img/hotel.png" width="10"></p>
-        </button>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let lieu of this.lieuxSelect">
-      <td>
-        <table>
-          <thead>
-            <tr>
-              <td><img src={{lieu.image}}></td>
-              <td>{{lieu.nom}}</td>
-              <td>à {{lieu.distance}}m</td>
-            </tr>
-          </thead>
-          </table>
-      </td>
-    </tr>
-  </tbody>
+<div id="poi">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <p>Catégories</p>
+          <button class="btn">
+              <p>Restaurants<img src="../../../assets/img/cutlery.png" width="20"></p>
+          </button>
+          <button class="btn">
+              <p>Magasins<img src="../../../assets/img/shopping-cart.png" width="20"></p>
+          </button>
+          <button class="btn">
+              <p>Musées<img src="../../../assets/img/pantheon.png" width="20"></p>
+          </button>
+          <button class="btn">
+              <p>Lieux<img src="../../../assets/img/parc.png" width="20"></p>
+          </button>
+          <button class="btn">
+              <p>Hotels<img src="../../../assets/img/hotel.png" width="20"></p>
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lieu of this.lieuxSelect">
+        <td>
+          <table>
+            <thead>
+              <tr>
+                <td><img src={{lieu.image}} width="20"></td>
+                <td>{{lieu.nom}}</td>
+                <td>à {{lieu.distance}}m</td>
+              </tr>
+            </thead>
+            </table>
+        </td>
+      </tr>
+    </tbody>
   </table>
+</div>
