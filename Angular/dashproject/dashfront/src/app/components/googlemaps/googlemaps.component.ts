@@ -4,10 +4,10 @@ import cle from '../../../../cle.json';
 
 let map: google.maps.Map, infoWindow: google.maps.InfoWindow;
 
-const loader = new Loader({
+export const loader = new Loader({
   apiKey: cle.CleGoogleMaps,
   version: "weekly",
-  libraries: ["places"]
+  libraries: ["places","geometry"]
 });
 
 let mapOptions = {
@@ -15,13 +15,14 @@ let mapOptions = {
     lat: 48.00746072080193,
     lng: 0.19740114421013952
   },
-  zoom: 16
+  zoom: 16,
+  disableDefaultUI: true
 };
 
 function initMap(){
 
 loader.load().then((google) => {
-  map = new google.maps.Map(document.getElementById("map") as HTMLElement, mapOptions); 
+  map = new google.maps.Map(document.getElementById("map") as HTMLElement, mapOptions);
 
   const centerButton = document.createElement("button");
 
