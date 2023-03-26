@@ -25,7 +25,7 @@ config = {
       console.log('Error:', e.stack);
     }
 
-    const b = db.exec("SELECT route_short_name,stop_name,route_link,route_long_name,stop_lat,stop_lon FROM stops JOIN stop_times USING(stop_id) JOIN trips USING(trip_id) JOIN routes USING(route_id);");
+    const b = db.exec("SELECT route_short_name,stop_name,route_link,stop_lat,stop_lon FROM stops JOIN stop_times USING(stop_id) JOIN trips USING(trip_id) JOIN routes USING(route_id) GROUP BY route_short_name,stop_name;");
 
     console.log(JSON.parse(JSON.stringify(b[0].values)))
     app.get('/',(req,res) => {;
