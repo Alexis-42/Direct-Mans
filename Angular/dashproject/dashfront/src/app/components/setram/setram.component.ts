@@ -39,7 +39,7 @@ export class SetramComponent implements OnInit{;
             }
           });
           this.infos.sort((a,b) => a.distance - b.distance);
-          //console.log(this.infos);
+          console.log(this.infos);
         });
       });
 
